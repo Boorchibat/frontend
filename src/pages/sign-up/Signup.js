@@ -42,7 +42,7 @@ export const Signup = () => {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.post("http://localhost:9000/auth/signup", {
+      const response = await axios.post("https://node-6oe4.onrender.com/auth/signup", {
         username: values.username,
         email: values.email,
         password: values.password,
