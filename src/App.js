@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { Home, Signin, Signup } from "./pages";
+import { useUserContext } from "./context";
+import { Tasks } from "./pages/tasks";
+import { Task } from "./pages/task";
 
-function App() {
+export const App = () => {
+  const { currentUser, userContextLoading } = useUserContext();
+
+  if (userContextLoading) {
+    return <div>...Loading</div>;
+  }
+  console.log(currentUser);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={currentUser ? <Home /> : <Navigate to="/sign-in" />}
+          />
+          <Route
+            path="/sign-in"
+            element={currentUser ? <Navigate to="/" /> : <Signin />}
+          />
+          <Route
+            path="/sign-up"
+            element={currentUser ? <Navigate to="/" /> : <Signup />}
+          />
+          <Route
+            path="/tasks/:id"
+            element={currentUser ? <Task /> : <Navigate to="/sign-in" />}
+          />
+          <Route
+            path="/tasks"
+            element={currentUser ? <Tasks /> : <Navigate to="/sign-in" />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
-
-export default App;
+};

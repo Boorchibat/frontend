@@ -1,0 +1,209 @@
+#container {
+    height: 100vh;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+  }
+  #Container-top{
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-content: center;
+  }
+  #welcome {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  #task {
+    font-size: 18px;
+    font-weight: 800;
+    color: grey;
+    margin-top: 0;
+  }
+  #input {
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    font-size: 15px;
+    border-color: silver;
+  }
+  #button {
+    height: 40px;
+    width: 310px;
+    border-radius: 5px;
+    font-size: 15px;
+    border-color: black;
+    color: white;
+  }
+  #link {
+    height: 40px;
+    width: 320px;
+    display: flex;
+    margin-left: 10px;
+    font-weight: 1000;
+    font-size: 16px;
+  }
+  #signup {
+    margin-left: 90px;
+    color: black;
+  }
+  #container {
+    height: 100vh;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    width: 100%
+  }
+  #welcome {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  #input {
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    font-size: 15px;
+    border-color: silver;
+  }
+  #button {
+    height: 40px;
+    width: 310px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: black;
+    border-color: transparent;
+  }
+  #link {
+    height: 40px;
+    width: 320px;
+    display: flex;
+    margin-left: 10px;
+    font-weight: 1000;
+    font-size: 12px;
+  }
+  #signup {
+    margin-left: 90px;
+    color: black;
+    margin-top: 12px;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    #container {
+      height: 100vh;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+      width: 100%;
+    }
+   
+    #Container-top{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-content: center;
+    }
+    #welcome {
+      font-size: 40px;
+      margin-bottom: 0;
+    }
+    #task {
+      font-size: 18px;
+      font-weight: 800;
+      color: grey;
+      margin-top: 0;
+    }
+    #input {
+      height: 40px;
+      width: 300px;
+      border-radius: 5px;
+      font-size: 15px;
+      border-color: silver;
+    }
+    #button {
+      height: 40px;
+      width: 310px;
+      border-radius: 5px;
+      font-size: 15px;
+      border-color: black;
+      color: white;
+    }
+    #link {
+      height: 40px;
+      width: 320px;
+      display: flex;
+      margin-left: 10px;
+      font-weight: 1000;
+      font-size: 16px;
+    }
+    #signup {
+      margin-left: 90px;
+      color: black;
+    }
+    #container {
+      height: 100vh;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+    }
+    #welcome {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    #input {
+      height: 40px;
+      width: 300px;
+      border-radius: 5px;
+      font-size: 15px;
+      border-color: silver;
+    }
+    #button {
+      height: 40px;
+      width: 310px;
+      border-radius: 5px;
+      font-size: 15px;
+      background-color: black;
+      border-color: transparent;
+    }
+    #link {
+      height: 40px;
+      width: 320px;
+      display: flex;
+      margin-left: 10px;
+      font-weight: 1000;
+      font-size: 12px;
+    }
+    #signup {
+      margin-left: 90px;
+      color: black;
+      margin-top: 12px;
+    }
+    #two-side{
+        width: 100%;
+        display: flex;
+        background-color: black;
+    }
+   }
