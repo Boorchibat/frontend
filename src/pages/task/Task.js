@@ -12,8 +12,6 @@ export const Task = () => {
     const handleCloseUpdate = () => setOpenUpdate(false);
     const handleOpenUpdate = () => setOpenUpdate(true);
   const task = tasks.find((task) => task._id === id);
-  console.log(tasks)
-   console.log(task)
 
   return (
     <div

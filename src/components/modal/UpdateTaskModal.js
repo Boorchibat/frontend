@@ -41,7 +41,7 @@ export const UpdateTaskModal = ({ open, handleClose, id, task }) => {
   const handleSubmit = async (values) => {
     try {
       const response = await axios.put(
-        `http://localhost:9000/tasks/${id}`,
+        `https://node-6oe4.onrender.com/tasks/${id}`,
         {
           title: values.title,
           description: values.description,

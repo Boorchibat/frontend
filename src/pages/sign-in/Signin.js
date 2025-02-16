@@ -45,7 +45,6 @@ export const Signin = () => {
         })
         const {data} = response
         localStorage.setItem("user", JSON.stringify(data))
-        console.log(data)
         setCurrentUser(data)
     }
     catch(error){

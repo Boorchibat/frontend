@@ -10,7 +10,6 @@ export const App = () => {
   if (userContextLoading) {
     return <div>...Loading</div>;
   }
-  console.log(currentUser);
   return (
     <div>
       <BrowserRouter>

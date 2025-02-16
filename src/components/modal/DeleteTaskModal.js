@@ -21,7 +21,7 @@ export const DeleteTaskModal = ({ open, handleClose, id, setDeleteId }) => {
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `http://localhost:9000/tasks/${id}`,
+        `https://node-6oe4.onrender.com/tasks/${id}`,
 
         {
           headers: {
@@ -32,7 +32,6 @@ export const DeleteTaskModal = ({ open, handleClose, id, setDeleteId }) => {
       const { data } = response;
       setTasks((prevTasks) => prevTasks.filter((task) => task._id !== id))
       handleClose()
-      console.log(data);
     } catch (error) {
       console.log(error);
       return error;

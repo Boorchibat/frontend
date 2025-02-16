@@ -15,7 +15,6 @@ export const Tasks = () => {
   const handleOpenDelete = () => setOpenDelete(true);
   const handleCloseDelete = () => setOpenDelete(false);
   const [deleteId, setDeleteId] = useState("");
-  console.log(deleteId)
 
   return (
     <div>

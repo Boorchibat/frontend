@@ -49,7 +49,6 @@ export const Signup = () => {
       });
 
       const { data } = response;
-      console.log(data);
       localStorage.setItem("user", JSON.stringify(data));
       setCurrentUser(data);
     } catch (error) {

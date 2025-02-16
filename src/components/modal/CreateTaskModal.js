@@ -41,7 +41,7 @@ export const CreateTaskModal = (props) => {
   const handleSubmit = async (values) => {
     try {
       const response = await axios.post(
-        "http://localhost:9000/tasks",
+        "https://node-6oe4.onrender.com/tasks",
         {
           title: values.title,
           description: values.description,
@@ -56,7 +56,6 @@ export const CreateTaskModal = (props) => {
       const { data } = response;
       setTasks((prevTasks) => [...prevTasks, data])
 
-      console.log(data);
     } catch (error) {
         console.log(error)
       return error;
