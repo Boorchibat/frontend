@@ -16,7 +16,7 @@ export const TaskContextProvider = (props) => {
   useEffect(() => {
     const getTasks = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/tasks", {
+        const response = await axios.get("https://node-6oe4.onrender.com/tasks", {
           headers: {
             Authorization: `Bearer ${currentUser.token}`,
           },
