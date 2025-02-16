@@ -12,6 +12,8 @@ export const Task = () => {
     const handleCloseUpdate = () => setOpenUpdate(false);
     const handleOpenUpdate = () => setOpenUpdate(true);
   const task = tasks.find((task) => task._id === id);
+  console.log(tasks)
+   console.log(task)
 
   return (
     <div
@@ -43,7 +45,7 @@ export const Task = () => {
             <h1>{task.createdAt}</h1>
           </div>
         </div>
-        <UpdateTaskModal id={task._id} open={openUpdate} handleClose={handleCloseUpdate}/>
+        <UpdateTaskModal id={task._id} task={task} open={openUpdate} handleClose={handleCloseUpdate}/>
       </div>
     </div>
   );

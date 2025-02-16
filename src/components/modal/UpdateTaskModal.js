@@ -8,9 +8,10 @@ import { useTaskContext, useUserContext } from "../../context";
 import * as yup from "yup";
 import { Select, MenuItem } from "@mui/material";
 
-export const UpdateTaskModal = ({ open, handleClose, id}) => {
+export const UpdateTaskModal = ({ open, handleClose, id, task }) => {
   const { currentUser } = useUserContext();
   const { setTasks } = useTaskContext();
+  
   const validationSchema = yup.object({
     title: yup
       .string()
@@ -24,17 +25,19 @@ export const UpdateTaskModal = ({ open, handleClose, id}) => {
   });
   const formik = useFormik({
     initialValues: {
-      title: "",
-      description: "",
-      status: "TO DO",
+      title: task.title|| "",  
+      description: task.description ||  "",
+      status: task.status ||  "TO DO",
     },
     validationSchema,
+    enableReinitialize: true, 
     onSubmit: (values, { resetForm }) => {
       handleSubmit(values);
       resetForm();
       handleClose();
     },
   });
+  
   const handleSubmit = async (values) => {
     try {
       const response = await axios.put(
@@ -56,14 +59,12 @@ export const UpdateTaskModal = ({ open, handleClose, id}) => {
           task.id === data.id ? { ...task, ...data } : task
         )
       );
-
-      console.log(data);
     } catch (error) {
       console.log(error);
-      return error;
     }
   };
-  console.log(id)
+
+
   return (
     <Modal open={open} handleClose={handleClose}>
       <div>
@@ -104,7 +105,6 @@ export const UpdateTaskModal = ({ open, handleClose, id}) => {
               )}
               <Select
                 name="status"
-                defaultValue="TO DO"
                 value={formik.values.status}
                 onChange={formik.handleChange}
                 style={{
