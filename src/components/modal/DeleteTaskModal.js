@@ -30,6 +30,7 @@ export const DeleteTaskModal = ({ open, handleClose, id, setDeleteId }) => {
         }
       );
       const { data } = response;
+      console.log({data})
       setTasks((prevTasks) => prevTasks.filter((task) => task._id !== id))
       handleClose()
     } catch (error) {
